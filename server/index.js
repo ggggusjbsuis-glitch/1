@@ -19,8 +19,13 @@ const wss = new WebSocketServer({ server });
 
 // ---- 配置 ----
 const CONFIG_PATH = path.join(__dirname, 'config.json');
-let config = { adminPassword:'admin123', adminUsername:'admin', maxPlayersPerRoom:6, port:3000 };
-try { if (fs.existsSync(CONFIG_PATH)) config = JSON.parse(fs.readFileSync(CONFIG_PATH,'utf-8')); }
+let config = {
+  adminPassword: process.env.ADMIN_PASSWORD || 'admin123',
+  adminUsername: process.env.ADMIN_USER || 'admin',
+  maxPlayersPerRoom: parseInt(process.env.MAX_PLAYERS) || 6,
+  port: parseInt(process.env.PORT) || 3000
+};
+try { if (fs.existsSync(CONFIG_PATH)) config = { ...config, ...JSON.parse(fs.readFileSync(CONFIG_PATH,'utf-8')) }; }
 catch(e){ console.error('配置加载失败'); }
 
 // ---- 多房间存储 ----
@@ -547,12 +552,8 @@ function getLocalIPs(){const nets=os.networkInterfaces();const ips=[];for(const[
 // 启动
 // ================================================================
 app.use(express.static(path.join(__dirname,'..','dist')));
-server.listen(config.port, () => {
-  const ips = getLocalIPs();
-  console.log('\n=======================================');
-  console.log('  剧本杀综合平台 v2.1 · 多房间');
-  console.log('  本机: http://localhost:'+config.port);
-  ips.forEach(({name,ip}) => console.log('  '+name+': http://'+ip+':'+config.port));
-  console.log('  管理员: '+config.adminUsername+' / '+config.adminPassword);
-  console.log('=======================================\n');
+const port = process.env.PORT || config.port;
+server.listen(port, () => {
+  console.log('Server running on port ' + port);
+  console.log('Admin: '+config.adminUsername+' / '+config.adminPassword);
 });
