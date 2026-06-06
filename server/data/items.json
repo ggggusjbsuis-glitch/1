@@ -1,0 +1,16 @@
+[
+  {"id":"item_001","name":"守夜人之徽","effectType":"move_free","effect":"本回合移动不消耗行动点（一次）。使用后即弃。","bound":true,"initialHolder":"role_1","source":"initial"},
+  {"id":"item_002","name":"残缺手稿","effectType":"search_double","effect":"在档案馆搜索线索时，从抽到的两张线索卡中保留两张。使用后即弃。","bound":true,"initialHolder":"role_2","source":"initial"},
+  {"id":"item_003","name":"虚空沙漏","effectType":"reset_card","effect":"选择一张本回合内你或他人已消耗的道具卡或已使用的行动，使其恢复为可用状态。使用后即弃。","bound":true,"initialHolder":"role_3","source":"initial"},
+  {"id":"item_004","name":"星陨之刃","effectType":"cancel_item","effect":"取消一张刚被使用的道具卡的效果（使其无效化）。需在该道具卡被使用后立即发动。使用后即弃。","bound":true,"initialHolder":"role_4","source":"initial"},
+  {"id":"item_005","name":"生命之泉","effectType":"heal_toxin","effect":"解除你或另一名玩家因虚空毒素造成的所有负面状态。使用后即弃。","bound":true,"initialHolder":"role_5","source":"initial"},
+  {"id":"item_006","name":"圣言书","effectType":"extra_question","effect":"在真理祭坛提问时，消耗2行动点可向上帝提两个问题（而非默认的一个）。使用后即弃。","bound":true,"initialHolder":"role_6","source":"initial"},
+  {"id":"item_007","name":"虚空抑制药剂","effectType":"toxin_immune","effect":"在封印基座区域执行搜索时，免疫该区域的一次虚空毒素伤害。使用后即弃。","bound":false,"initialHolder":null,"source":"黑市","rarity":"普通"},
+  {"id":"item_008","name":"星泪花提取物","effectType":"peek_exchange","effect":"选择一名玩家，你与该玩家各自秘密查看对方手中随机一张线索卡。此行为不公开。使用后即弃。","bound":false,"initialHolder":null,"source":"黑市","rarity":"稀有"},
+  {"id":"item_009","name":"符文解读镜","effectType":"view_random","effect":"查看任意一名玩家手持的全部线索卡标题（非完整内容）。该玩家会被告知有人查看了列表但不知道是谁。使用后即弃。","bound":false,"initialHolder":null,"source":"黑市","rarity":"普通"},
+  {"id":"item_010","name":"匿踪斗篷","effectType":"hide_search","effect":"本回合你在任意区域进行的搜索行为不公开记录。其他玩家只看到你移动了。使用后即弃。","bound":false,"initialHolder":null,"source":"黑市","rarity":"普通"},
+  {"id":"item_011","name":"真言契约书","effectType":"force_truth","effect":"指定一名玩家。该玩家在本轮讨论中对你提出的一个具体问题必须如实回答。不可用于询问个人目标或真实阵营。使用后即弃。","bound":false,"initialHolder":null,"source":"真理祭坛","rarity":"极稀有"},
+  {"id":"item_012","name":"密室钥匙·A","effectType":"use_key","effect":"与密室钥匙·B一同使用，开启地下密室。不可交易但可转交他人。不消耗。","bound":false,"transferable":true,"initialHolder":null,"source":"剧情触发","triggerDay":4,"triggerReceiver":"role_1"},
+  {"id":"item_013","name":"密室钥匙·B","effectType":"use_key","effect":"与密室钥匙·A一同使用，开启地下密室。不可交易但可转交他人。不消耗。","bound":false,"transferable":true,"initialHolder":null,"source":"剧情触发","triggerDay":4,"triggerReceiver":"role_2"},
+  {"id":"item_014","name":"记忆水晶碎片","effectType":"memory_recall","effect":"选择一张本局游戏中已被消耗或丢弃的道具卡，查看其完整说明（包括隐藏信息）。使用后即弃。","bound":false,"initialHolder":null,"source":"剧情触发（D4塞拉水晶碎裂后进入黑市）","rarity":"唯一"}
+]

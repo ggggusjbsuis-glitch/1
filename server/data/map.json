@@ -1,0 +1,18 @@
+{
+  "regions": ["档案馆", "黑市", "真理祭坛", "星陨遗迹", "封印基座", "圣殿"],
+  "regionCluePools": {
+    "档案馆":   ["clue_013","clue_014","clue_015","clue_016","clue_017","clue_018","clue_019"],
+    "星陨遗迹": ["clue_020","clue_021","clue_022"],
+    "封印基座": ["clue_023","clue_024"]
+  },
+  "regionItemPool": {
+    "黑市": ["item_007","item_008","item_009","item_010","item_011"]
+  },
+  "specialLocations": {
+    "地下密室": {
+      "type": "trigger",
+      "requiredItems": ["item_012","item_013"],
+      "announceText": "密室开启！伊莱亚斯的原始档案证实：封印的真正锚点是卡珊德拉的灵魂。她在裂隙另一边独自承受了一百年的虚空侵蚀。伊莱亚斯写道：'我用了余生寻找置换锚点的方法，失败了。但星泪花是唯一的希望。'"
+    }
+  }
+}

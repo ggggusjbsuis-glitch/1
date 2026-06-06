@@ -1,0 +1,558 @@
+{
+  "scriptId": "starfall_academy",
+  "title": "星陨学院·碎星之夜",
+  "subtitle": "圣徒与叛徒的百年真相",
+  "description": "百年前两位传奇大法师伊莱亚斯与卡珊德拉在碎星之夜双双陨落。封印将满百年之限，六名被选召者齐聚学院——拼凑真相，做出抉择。",
+  "playerCount": 6,
+  "totalDays": 5,
+  "estimatedTime": "45-90分钟",
+  "tags": [
+    "悬疑",
+    "奇幻",
+    "阵营对抗",
+    "中世纪魔法"
+  ],
+  "version": "1.0.0",
+  "heroes": {
+    "A": {
+      "name": "伊莱亚斯",
+      "publicImage": "圣人——牺牲自己封印虚空裂隙的伟大法师",
+      "truth": "因恐惧死亡试图开启虚空裂隙获取永生。实验失控后被卡珊德拉阻止。活下来后用余生篡改历史、试图弥补"
+    },
+    "B": {
+      "name": "卡珊德拉",
+      "publicImage": "叛徒——试图破坏封印仪式被击杀",
+      "truth": "真正的英雄。赶到现场阻止伊莱亚斯后，自愿进入封印成为锚点灵魂。在裂隙另一边独自承受一百年虚空侵蚀"
+    }
+  },
+  "mainGoals": [
+    {
+      "id": "identity",
+      "name": "身份还原",
+      "description": "找出两位主人公的真实身份及命运"
+    },
+    {
+      "id": "timeline",
+      "name": "因果链重构",
+      "description": "完整还原碎星之夜发生了什么"
+    },
+    {
+      "id": "choice",
+      "name": "最终抉择",
+      "description": "在三条路径中选择——加固封印/重建封印/第三条路"
+    }
+  ],
+  "endingThresholds": {
+    "truthHigh": 0.8,
+    "truthLow": 0.4
+  },
+  "characters": [
+    {
+      "id": "role_1",
+      "name": "洛根",
+      "title": "守夜人",
+      "publicIdentity": "星陨学院守夜人队长，34岁",
+      "trueIdentity": "伊莱亚斯的曾孙，家族世代守护封印",
+      "camp": "A",
+      "campType": "public",
+      "personalGoalType": "强化型",
+      "personalGoal": "确保封印不被破坏",
+      "secretToHide": "封印衰退是因原始缺陷而非时间",
+      "initialClues": [
+        "clue_001",
+        "clue_002"
+      ],
+      "initialItem": "item_001",
+      "scriptFiles": {
+        "day1": "daily-scripts/role_1_d1.txt",
+        "day2": "daily-scripts/role_1_d2.txt",
+        "day3": "daily-scripts/role_1_d3.txt",
+        "day4": "daily-scripts/role_1_d4.txt",
+        "day5": "daily-scripts/role_1_d5.txt"
+      }
+    },
+    {
+      "id": "role_2",
+      "name": "艾琳",
+      "title": "学者",
+      "publicIdentity": "星陨学院首席学者，29岁",
+      "trueIdentity": "求真者，可在最终抉择改变立场",
+      "camp": "A",
+      "campType": "public",
+      "personalGoalType": "偏离型",
+      "personalGoal": "还原碎星之夜完整真相",
+      "secretToHide": "已发现官方历史矛盾",
+      "initialClues": [
+        "clue_003",
+        "clue_004"
+      ],
+      "initialItem": "item_002",
+      "scriptFiles": {
+        "day1": "daily-scripts/role_2_d1.txt",
+        "day2": "daily-scripts/role_2_d2.txt",
+        "day3": "daily-scripts/role_2_d3.txt",
+        "day4": "daily-scripts/role_2_d4.txt",
+        "day5": "daily-scripts/role_2_d5.txt"
+      }
+    },
+    {
+      "id": "role_3",
+      "name": "马库斯",
+      "title": "商人",
+      "publicIdentity": "黑市商人，情报贩子",
+      "trueIdentity": "卡珊德拉的曾孙，潜伏在阵营A",
+      "camp": "A",
+      "campType": "hidden",
+      "trueCamp": "B",
+      "personalGoalType": "颠覆型",
+      "personalGoal": "暗中帮助阵营B完成卡珊德拉的仪式",
+      "secretToHide": "真实身份是卡珊德拉后人",
+      "initialClues": [
+        "clue_005",
+        "clue_006"
+      ],
+      "initialItem": "item_003",
+      "scriptFiles": {
+        "day1": "daily-scripts/role_3_d1.txt",
+        "day2": "daily-scripts/role_3_d2.txt",
+        "day3": "daily-scripts/role_3_d3.txt",
+        "day4": "daily-scripts/role_3_d4.txt",
+        "day5": "daily-scripts/role_3_d5.txt"
+      }
+    },
+    {
+      "id": "role_4",
+      "name": "塞拉",
+      "title": "复仇者",
+      "publicIdentity": "卡珊德拉教派高阶祭司",
+      "trueIdentity": "卡珊德拉直系后裔",
+      "camp": "B",
+      "campType": "public",
+      "personalGoalType": "强化型",
+      "personalGoal": "打破旧封印，重建正确封印",
+      "secretToHide": "持有卡珊德拉完整记忆水晶",
+      "initialClues": [
+        "clue_007",
+        "clue_008"
+      ],
+      "initialItem": "item_004",
+      "scriptFiles": {
+        "day1": "daily-scripts/role_4_d1.txt",
+        "day2": "daily-scripts/role_4_d2.txt",
+        "day3": "daily-scripts/role_4_d3.txt",
+        "day4": "daily-scripts/role_4_d4.txt",
+        "day5": "daily-scripts/role_4_d5.txt"
+      }
+    },
+    {
+      "id": "role_5",
+      "name": "莉迪亚",
+      "title": "医者",
+      "publicIdentity": "星陨学院医师",
+      "trueIdentity": "第三条路发现者，继承了伊莱亚斯未完成的研究",
+      "camp": "B",
+      "campType": "public",
+      "personalGoalType": "偏离型",
+      "personalGoal": "找到不伤害任何人的解决方案",
+      "secretToHide": "发现星泪花可用于置换封印核心",
+      "initialClues": [
+        "clue_009",
+        "clue_010"
+      ],
+      "initialItem": "item_005",
+      "scriptFiles": {
+        "day1": "daily-scripts/role_5_d1.txt",
+        "day2": "daily-scripts/role_5_d2.txt",
+        "day3": "daily-scripts/role_5_d3.txt",
+        "day4": "daily-scripts/role_5_d4.txt",
+        "day5": "daily-scripts/role_5_d5.txt"
+      }
+    },
+    {
+      "id": "role_6",
+      "name": "达米安",
+      "title": "祭司",
+      "publicIdentity": "真理祭坛守坛祭司，42岁",
+      "trueIdentity": "伊莱亚斯秘密门徒后代，手持忏悔书，潜伏在阵营B",
+      "camp": "B",
+      "campType": "hidden",
+      "trueCamp": "A",
+      "personalGoalType": "颠覆型",
+      "personalGoal": "揭示完整真相同时保护伊莱亚斯不被妖魔化",
+      "secretToHide": "持有伊莱亚斯完整忏悔书",
+      "initialClues": [
+        "clue_011",
+        "clue_012"
+      ],
+      "initialItem": "item_006",
+      "scriptFiles": {
+        "day1": "daily-scripts/role_6_d1.txt",
+        "day2": "daily-scripts/role_6_d2.txt",
+        "day3": "daily-scripts/role_6_d3.txt",
+        "day4": "daily-scripts/role_6_d4.txt",
+        "day5": "daily-scripts/role_6_d5.txt"
+      }
+    }
+  ],
+  "clues": [
+    {
+      "id": "clue_001",
+      "title": "封印巡查记录",
+      "content": "本月裂隙出现三次。第一次月初（宽度一指），第二次月中（宽度三指），第三次三日前（宽度一掌）。虚空能量浓度增速已从线性转为指数级。封印内部结构正在加速瓦解。",
+      "region": "initial",
+      "initialHolder": "role_1"
+    },
+    {
+      "id": "clue_002",
+      "title": "守夜人临终遗言",
+      "content": "洛根的父亲临终前说：'封印的力量正在衰退，但不是因为时间……而是因为封印本身从一开始就有缺陷。'",
+      "region": "initial",
+      "initialHolder": "role_1"
+    },
+    {
+      "id": "clue_003",
+      "title": "伊莱亚斯实验笔记·矛盾处",
+      "content": "伊莱亚斯的封印术公式在关键步骤存在前后矛盾——按照笔记中记载的施法方式，封印不可能稳定维持一百年。公式需要两个对等魔力源同时施法，但笔记中伊莱亚斯声称自己是独自完成的。",
+      "region": "initial",
+      "initialHolder": "role_2"
+    },
+    {
+      "id": "clue_004",
+      "title": "星泪花光谱检测报告",
+      "content": "封印裂隙残留物中检测到高浓度星泪花花粉。星泪花在魔法反应中会留下独特的金色光谱。此花是卡珊德拉生前最喜爱的花。卡珊德拉在封印成立时不仅在场，而且主动注入了魔力——这与官方记载的'她试图破坏封印'完全矛盾。",
+      "region": "initial",
+      "initialHolder": "role_2"
+    },
+    {
+      "id": "clue_005",
+      "title": "黑市百年交易记录",
+      "content": "碎星之夜前一天，有人从黑市购入虚空抑制药剂×20瓶。购买者签名经魔法加密——解密后指向伊莱亚斯的私人魔法印章。虚空抑制药剂的唯一用途是在虚空裂隙打开时抑制其扩张速度。伊莱亚斯在碎星之夜前一天就知道裂隙会打开。",
+      "region": "initial",
+      "initialHolder": "role_3"
+    },
+    {
+      "id": "clue_006",
+      "title": "商人的直觉",
+      "content": "马库斯近几个月不自觉地大量收购星泪花。他自己也说不清原因——星泪花只是一种不起眼的野花。但他每次看到就想买。他是卡珊德拉的曾孙，但此身份目前仅他自己和塞拉知晓。",
+      "region": "initial",
+      "initialHolder": "role_3"
+    },
+    {
+      "id": "clue_007",
+      "title": "卡珊德拉教派·百年预言",
+      "content": "教派经文记载：'当双星交汇之日，血脉的后裔将聚于学院，真实将重见天日，被囚者将获自由。百年之限到来时，锚点的灵魂将于虚空中燃尽，除非有人在此之前完成真正的封印。'",
+      "region": "initial",
+      "initialHolder": "role_4"
+    },
+    {
+      "id": "clue_008",
+      "title": "记忆水晶·第一段转录",
+      "content": "卡珊德拉遗留的记忆水晶第一段画面：伊莱亚斯站在一个巨大的魔法阵中央。符文的光芒不是封印术的蓝色，而是虚空开启术的血红色。他一个人在进行开启仪式。水晶中有四段记忆，这是第一段。",
+      "region": "initial",
+      "initialHolder": "role_4"
+    },
+    {
+      "id": "clue_009",
+      "title": "星泪花医疗发现",
+      "content": "星泪花花粉对虚空毒素有显著抑制效果——临床实验中毒素活性降低约40%。这不是物理反应，而是星泪花在魔法层面与虚空裂隙存在某种天然的亲和性。进一步研究可能揭示更深层的应用。",
+      "region": "initial",
+      "initialHolder": "role_5"
+    },
+    {
+      "id": "clue_010",
+      "title": "虚空裂隙生物学特性",
+      "content": "虚空裂隙不是简单的魔法裂缝。从临床病例来看，虚空毒素在人体内的蔓延模式更像是一种有生命的寄生体而非惰性毒素。这意味着静止的、一次性的封印方案在逻辑上不可能永久有效——裂隙会'适应'封印并找到新的突破口。",
+      "region": "initial",
+      "initialHolder": "role_5"
+    },
+    {
+      "id": "clue_011",
+      "title": "伊莱亚斯忏悔书·第一页",
+      "content": "忏悔书全文共十页，这是第一页。开头第一段话：'后人若读到此书，请先记住——卡珊德拉是真正的英雄，而我，是一个需要被原谅的懦夫。碎星之夜，我因恐惧死亡而试图打开虚空裂隙获取永生之力。实验失控了。卡珊德拉赶到后阻止了我。但裂隙已经打开，必须有人将它封印。'",
+      "region": "initial",
+      "initialHolder": "role_6"
+    },
+    {
+      "id": "clue_012",
+      "title": "真理祭坛的观察",
+      "content": "作为守坛祭司，你对封印的细微变化比任何人都敏感。最近你注意到祭坛在回答关于封印状态的问题时，语气中出现了极其细微的异常。以你的经验判断，祭坛正在试图告诉你一件它无法直接用'是'或'否'回答的事。",
+      "region": "initial",
+      "initialHolder": "role_6"
+    },
+    {
+      "id": "clue_013",
+      "title": "伊莱亚斯日记·碎星前三天",
+      "content": "伊莱亚斯于碎星之夜前三天，从图书馆借走了全部七本关于'封印逆向解除'的书籍。借阅记录上有他的亲笔签名。逆向解除封印的知识，通常只用于一个目的——在封印完成之前中止它、或修改它。",
+      "region": "档案馆",
+      "initialHolder": null
+    },
+    {
+      "id": "clue_014",
+      "title": "伊莱亚斯日记·碎星当天",
+      "content": "碎星之夜当天的下午，伊莱亚斯在日记中写道：'我已经决定了。请她来帮我。整个大陆上只有她的魔力能与我完全对等。她会来的——即使她恨我。'",
+      "region": "档案馆",
+      "initialHolder": null
+    },
+    {
+      "id": "clue_015",
+      "title": "卡珊德拉遗物·星陨之刃分析",
+      "content": "星陨之刃的刀刃上检测到残留魔力痕迹。经比对，此刃在一百年前斩断过一个正在运行中的魔法阵核心符文——经残留魔力特征比对——那是一个虚空开启阵。刃柄刻有铭文：'为真相而断。'",
+      "region": "档案馆",
+      "initialHolder": null
+    },
+    {
+      "id": "clue_016",
+      "title": "伊莱亚斯死亡记录",
+      "content": "伊莱亚斯于碎星之夜三年后去世，死因为'实验事故'。尸检报告标注：死者胸口有一道匕首造成的已愈合旧伤，与直接死因无关。真正死因——虚空毒素长期侵蚀导致的魔力回路全面崩溃。临终前三个月，他全力研究星泪花的魔法属性，试图找到置换封印核心的方法，未果。",
+      "region": "档案馆",
+      "initialHolder": null
+    },
+    {
+      "id": "clue_017",
+      "title": "学院官方记录·碎星之夜（公开版）",
+      "content": "官方记载：伊莱亚斯在碎星之夜以自身生命为代价，独自施展'星辉永固'封印术。叛徒卡珊德拉闯入仪式现场试图破坏封印，被伊莱亚斯击杀。记录末尾有学院理事会三十年前添加的批注：'以上内容经多方核实，存在多处事实性存疑。原始档案已被前任理事长封存于地下密室。待考。'",
+      "region": "档案馆",
+      "initialHolder": null
+    },
+    {
+      "id": "clue_018",
+      "title": "星泪花与封印术关联研究",
+      "content": "一份未署名的研究笔记（笔迹特征与伊莱亚斯晚年笔迹一致）：'星泪花是唯一已知的能与虚空裂隙产生亲和反应的物质。如果将高浓度星泪花提取物注入封印基座，理论上可以创建一个魔力缓冲层，将封印核心中的锚定灵魂置换出来。此方案需要大量星泪花（至少50朵的提取量）和一个自愿承担置换代价的生命力供体——除非能找到替代供体的方法。'",
+      "region": "档案馆",
+      "initialHolder": null
+    },
+    {
+      "id": "clue_019",
+      "title": "百年之限机制说明",
+      "content": "星辉永固封印术的根本机制：以一个有意识的灵魂作为魔力锚点，将其绑定在封印核心中。锚点灵魂的意志力直接支撑封印的稳定性。封印每运行一百年，锚点灵魂与虚空的侵蚀-抵抗平衡会到达临界点。关键事实：星辉永固术只能由锚点灵魂自愿进入封印核心才能成立——不可强迫。",
+      "region": "档案馆",
+      "initialHolder": null
+    },
+    {
+      "id": "clue_020",
+      "title": "第三方目击证词·完整版",
+      "content": "一份匿名的目击证词：'那个男人站在一个血红色的魔法阵中央，天空正在裂开。然后一个女人冲了进去，用匕首斩断了魔法阵的核心符文。两人在裂隙前激烈搏斗。男人先倒下了。女人跪在他旁边，好像说了些什么。然后她站起来，面向裂隙，一步一步走了进去。裂隙关闭了。那个男人还活着——我看到他跪在地上，伸着一只手。她是自愿走进去的。'",
+      "region": "星陨遗迹",
+      "initialHolder": null
+    },
+    {
+      "id": "clue_021",
+      "title": "封印基座底层符文拓片",
+      "content": "封印基座由两层符文构成。外层——刚硬、精密、结构化，确认为伊莱亚斯的施法特征。内层——柔韧、有机、自适应，完全不符合伊莱亚斯的任何已知作品。比对卡珊德拉留存的私人笔记——内层符文与她的施法风格完全吻合，匹配度97%。封印是一个双人合作产物。",
+      "region": "星陨遗迹",
+      "initialHolder": null
+    },
+    {
+      "id": "clue_022",
+      "title": "虚空裂隙开启的触发装置残骸",
+      "content": "星陨遗迹深处有一个被魔力过载熔毁的魔法装置残骸。经结构分析，这是一个单人魔力增幅器——让一名施法者临时获得双人级别的魔力输出。装置的金属铭牌上刻有伊莱亚斯工作室的制造编号。碎星之夜是一场有预谋的、有技术准备的实验。",
+      "region": "星陨遗迹",
+      "initialHolder": null
+    },
+    {
+      "id": "clue_023",
+      "title": "封印当前状态·实时读数",
+      "content": "封印外层（伊莱亚斯结构）完整度约60%，仍在持续下降。封印内层（卡珊德拉结构）完整度约25%，且读数每一小时都在衰减。核心锚点的灵魂印记信号强度仅剩原始值的18%。按当前衰减速率推算，锚点灵魂将在约48小时后完全熄灭。",
+      "region": "封印基座",
+      "initialHolder": null
+    },
+    {
+      "id": "clue_024",
+      "title": "守夜人家族日记·残页",
+      "content": "洛根的曾祖父在日记中写下的一行字：'她的血和他的咒，在那一刻纠缠在一起。我无法分辨谁是施术者，谁是代价。但我知道，历史会说谎。'这张残页是日记被撕掉的最后十页中唯一留存的一页。其余九页下落不明。",
+      "region": "封印基座",
+      "initialHolder": null
+    }
+  ],
+  "items": [
+    {
+      "id": "item_001",
+      "name": "守夜人之徽",
+      "effectType": "move_free",
+      "effect": "本回合移动不消耗行动点（一次）。使用后即弃。",
+      "bound": true,
+      "initialHolder": "role_1",
+      "source": "initial",
+      "rarity": null
+    },
+    {
+      "id": "item_002",
+      "name": "残缺手稿",
+      "effectType": "search_double",
+      "effect": "在档案馆搜索线索时，从抽到的两张线索卡中保留两张。使用后即弃。",
+      "bound": true,
+      "initialHolder": "role_2",
+      "source": "initial",
+      "rarity": null
+    },
+    {
+      "id": "item_003",
+      "name": "虚空沙漏",
+      "effectType": "reset_card",
+      "effect": "选择一张本回合内你或他人已消耗的道具卡或已使用的行动，使其恢复为可用状态。使用后即弃。",
+      "bound": true,
+      "initialHolder": "role_3",
+      "source": "initial",
+      "rarity": null
+    },
+    {
+      "id": "item_004",
+      "name": "星陨之刃",
+      "effectType": "cancel_item",
+      "effect": "取消一张刚被使用的道具卡的效果（使其无效化）。需在该道具卡被使用后立即发动。使用后即弃。",
+      "bound": true,
+      "initialHolder": "role_4",
+      "source": "initial",
+      "rarity": null
+    },
+    {
+      "id": "item_005",
+      "name": "生命之泉",
+      "effectType": "heal_toxin",
+      "effect": "解除你或另一名玩家因虚空毒素造成的所有负面状态。使用后即弃。",
+      "bound": true,
+      "initialHolder": "role_5",
+      "source": "initial",
+      "rarity": null
+    },
+    {
+      "id": "item_006",
+      "name": "圣言书",
+      "effectType": "extra_question",
+      "effect": "在真理祭坛提问时，消耗2行动点可向上帝提两个问题（而非默认的一个）。使用后即弃。",
+      "bound": true,
+      "initialHolder": "role_6",
+      "source": "initial",
+      "rarity": null
+    },
+    {
+      "id": "item_007",
+      "name": "虚空抑制药剂",
+      "effectType": "toxin_immune",
+      "effect": "在封印基座区域执行搜索时，免疫该区域的一次虚空毒素伤害。使用后即弃。",
+      "bound": false,
+      "initialHolder": null,
+      "source": "黑市",
+      "rarity": "普通"
+    },
+    {
+      "id": "item_008",
+      "name": "星泪花提取物",
+      "effectType": "peek_exchange",
+      "effect": "选择一名玩家，你与该玩家各自秘密查看对方手中随机一张线索卡。此行为不公开。使用后即弃。",
+      "bound": false,
+      "initialHolder": null,
+      "source": "黑市",
+      "rarity": "稀有"
+    },
+    {
+      "id": "item_009",
+      "name": "符文解读镜",
+      "effectType": "view_random",
+      "effect": "查看任意一名玩家手持的全部线索卡标题（非完整内容）。该玩家会被告知有人查看了列表但不知道是谁。使用后即弃。",
+      "bound": false,
+      "initialHolder": null,
+      "source": "黑市",
+      "rarity": "普通"
+    },
+    {
+      "id": "item_010",
+      "name": "匿踪斗篷",
+      "effectType": "hide_search",
+      "effect": "本回合你在任意区域进行的搜索行为不公开记录。其他玩家只看到你移动了。使用后即弃。",
+      "bound": false,
+      "initialHolder": null,
+      "source": "黑市",
+      "rarity": "普通"
+    },
+    {
+      "id": "item_011",
+      "name": "真言契约书",
+      "effectType": "force_truth",
+      "effect": "指定一名玩家。该玩家在本轮讨论中对你提出的一个具体问题必须如实回答。不可用于询问个人目标或真实阵营。使用后即弃。",
+      "bound": false,
+      "initialHolder": null,
+      "source": "真理祭坛",
+      "rarity": "极稀有"
+    },
+    {
+      "id": "item_012",
+      "name": "密室钥匙·A",
+      "effectType": "use_key",
+      "effect": "与密室钥匙·B一同使用，开启地下密室。不可交易但可转交他人。不消耗。",
+      "bound": false,
+      "initialHolder": null,
+      "source": "剧情触发",
+      "rarity": null
+    },
+    {
+      "id": "item_013",
+      "name": "密室钥匙·B",
+      "effectType": "use_key",
+      "effect": "与密室钥匙·A一同使用，开启地下密室。不可交易但可转交他人。不消耗。",
+      "bound": false,
+      "initialHolder": null,
+      "source": "剧情触发",
+      "rarity": null
+    },
+    {
+      "id": "item_014",
+      "name": "记忆水晶碎片",
+      "effectType": "memory_recall",
+      "effect": "选择一张本局游戏中已被消耗或丢弃的道具卡，查看其完整说明（包括隐藏信息）。使用后即弃。",
+      "bound": false,
+      "initialHolder": null,
+      "source": "剧情触发（D4塞拉水晶碎裂后进入黑市）",
+      "rarity": "唯一"
+    }
+  ],
+  "map": {
+    "regions": [
+      "档案馆",
+      "黑市",
+      "真理祭坛",
+      "星陨遗迹",
+      "封印基座",
+      "圣殿"
+    ],
+    "regionCluePools": {
+      "档案馆": [
+        "clue_013",
+        "clue_014",
+        "clue_015",
+        "clue_016",
+        "clue_017",
+        "clue_018",
+        "clue_019"
+      ],
+      "星陨遗迹": [
+        "clue_020",
+        "clue_021",
+        "clue_022"
+      ],
+      "封印基座": [
+        "clue_023",
+        "clue_024"
+      ]
+    },
+    "regionItemPool": {
+      "黑市": [
+        "item_007",
+        "item_008",
+        "item_009",
+        "item_010",
+        "item_011"
+      ]
+    },
+    "specialLocations": {
+      "地下密室": {
+        "type": "trigger",
+        "requiredItems": [
+          "item_012",
+          "item_013"
+        ],
+        "announceText": "密室开启！伊莱亚斯的原始档案证实：封印的真正锚点是卡珊德拉的灵魂。她在裂隙另一边独自承受了一百年的虚空侵蚀。伊莱亚斯写道：'我用了余生寻找置换锚点的方法，失败了。但星泪花是唯一的希望。'"
+      }
+    }
+  }
+}
